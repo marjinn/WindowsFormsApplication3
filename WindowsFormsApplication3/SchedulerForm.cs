@@ -25,7 +25,7 @@ namespace WindowsFormsApplication3
             this.Dispose();
         }
         CustomProgressForm frm = new CustomProgressForm();
-        NotificationSplash notSplashForm = new NotificationSplash();
+        //NotificationSplash notSplashForm = new NotificationSplash();
 
 
 
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication3
             try
             {
                 frm.Show();
-                notSplashForm.ShowDialog();
+                //notSplashForm.ShowDialog();
 
             }
             catch (System.ObjectDisposedException)
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication3
             }
 
             MessageBox.Show("Date : " + dateTimePickerText + " " + "\nTime : " + dateTimePickerTimeText + "\nSchedule Chosen : " + checkedRadioButton.ToUpper());
-            Schedule.Text = "Date : " + dateTimePickerText + " " + "\nTime : " + dateTimePickerTimeText + "\nSchedule Chosen :" + checkedRadioButton.ToUpper();
+            Schedule.Text = "Date : " + dateTimePickerText + " " + "\t\t\t\t  Time : " + dateTimePickerTimeText + "\n\nSchedule Chosen :" + checkedRadioButton.ToUpper();
 
         }
     }

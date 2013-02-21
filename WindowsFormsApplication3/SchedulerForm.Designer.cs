@@ -40,8 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Save_Schedule = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Schedule = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -185,16 +186,6 @@
             this.groupBox2.Text = "Schedule";
             this.groupBox2.UseCompatibleTextRendering = true;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(119, 18);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox4.Size = new System.Drawing.Size(126, 48);
-            this.groupBox4.TabIndex = 14;
-            this.groupBox4.TabStop = false;
-            // 
             // Save_Schedule
             // 
             this.Save_Schedule.FlatAppearance.BorderSize = 2;
@@ -208,16 +199,26 @@
             this.Save_Schedule.UseVisualStyleBackColor = true;
             this.Save_Schedule.Click += new System.EventHandler(this.Save_Schedule_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.Schedule);
+            this.groupBox4.Location = new System.Drawing.Point(18, 18);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox4.Size = new System.Drawing.Size(440, 78);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.Schedule);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(12, 259);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(477, 89);
+            this.groupBox3.Size = new System.Drawing.Size(477, 114);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current Schedule";
@@ -226,10 +227,10 @@
             // Schedule
             // 
             this.Schedule.AutoSize = true;
-            this.Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schedule.Location = new System.Drawing.Point(68, 30);
+            this.Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Schedule.Location = new System.Drawing.Point(50, 18);
             this.Schedule.Name = "Schedule";
-            this.Schedule.Size = new System.Drawing.Size(21, 13);
+            this.Schedule.Size = new System.Drawing.Size(25, 15);
             this.Schedule.TabIndex = 0;
             this.Schedule.Text = "wtf";
             // 
@@ -264,12 +265,12 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Optimization Scheduling : ";
             // 
-            // Form1
+            // SchedulerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(501, 359);
+            this.ClientSize = new System.Drawing.Size(501, 385);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -280,15 +281,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "SchedulerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scheduler";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
