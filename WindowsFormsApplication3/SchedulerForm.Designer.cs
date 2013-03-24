@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SchedulerForm));
             this.radioButtonDaily = new System.Windows.Forms.RadioButton();
             this.radioButtonWeekly = new System.Windows.Forms.RadioButton();
@@ -42,16 +43,22 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Save_Schedule = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Schedule = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.popupNotifier1 = new NotificationWindow.PopupNotifier();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButtonDaily
@@ -189,6 +196,8 @@
             // Save_Schedule
             // 
             this.Save_Schedule.FlatAppearance.BorderSize = 2;
+            this.Save_Schedule.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Save_Schedule.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Save_Schedule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Save_Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save_Schedule.Location = new System.Drawing.Point(32, 129);
@@ -210,6 +219,16 @@
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             // 
+            // Schedule
+            // 
+            this.Schedule.AutoSize = true;
+            this.Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Schedule.Location = new System.Drawing.Point(20, 18);
+            this.Schedule.Name = "Schedule";
+            this.Schedule.Size = new System.Drawing.Size(25, 15);
+            this.Schedule.TabIndex = 0;
+            this.Schedule.Text = "wtf";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -223,16 +242,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current Schedule";
             this.groupBox3.UseCompatibleTextRendering = true;
-            // 
-            // Schedule
-            // 
-            this.Schedule.AutoSize = true;
-            this.Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schedule.Location = new System.Drawing.Point(50, 18);
-            this.Schedule.Name = "Schedule";
-            this.Schedule.Size = new System.Drawing.Size(25, 15);
-            this.Schedule.TabIndex = 0;
-            this.Schedule.Text = "wtf";
             // 
             // label1
             // 
@@ -265,6 +274,46 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Optimization Scheduling : ";
             // 
+            // popupNotifier1
+            // 
+            this.popupNotifier1.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.popupNotifier1.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.popupNotifier1.ContentText = null;
+            this.popupNotifier1.GradientPower = 300;
+            this.popupNotifier1.HeaderHeight = 20;
+            this.popupNotifier1.Image = null;
+            this.popupNotifier1.OptionsMenu = this.contextMenuStrip1;
+            this.popupNotifier1.Size = new System.Drawing.Size(400, 100);
+            this.popupNotifier1.TitleFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.popupNotifier1.TitleText = null;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 70);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.aboutToolStripMenuItem.Text = "About...";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.settingsToolStripMenuItem.Text = "Settings...";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // SchedulerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +333,7 @@
             this.Name = "SchedulerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scheduler";
+            this.Load += new System.EventHandler(this.SchedulerForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -292,6 +342,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,6 +368,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button Save_Schedule;
+
+        private NotificationWindow.PopupNotifier popupNotifier1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+
 
     }
 }

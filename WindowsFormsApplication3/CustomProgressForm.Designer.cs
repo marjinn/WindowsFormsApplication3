@@ -45,7 +45,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.ForeColor = System.Drawing.Color.White;
+            this.progressBar1.ForeColor = System.Drawing.Color.Maroon;
             this.progressBar1.Location = new System.Drawing.Point(15, 20);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.progressBar1.Name = "progressBar1";
@@ -99,7 +99,6 @@
             this.groupBox1.Size = new System.Drawing.Size(523, 57);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.UseWaitCursor = true;
             // 
             // groupBox2
             // 
@@ -141,6 +140,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(6, 1);
             this.groupBox3.Name = "groupBox3";
@@ -162,6 +162,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -170,7 +171,7 @@
             this.Name = "CustomProgressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Custom ProGress";
-            this.UseWaitCursor = true;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
